@@ -10,6 +10,7 @@ theme.onclick = function(){
     else{
     
     document.body.style.backgroundImage = "url('assests/lightBack.jpg')";
+         theme.innerHTML="Dark"
     }
 }
 //Function to toggle between theme ends.
