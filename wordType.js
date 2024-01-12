@@ -1,5 +1,5 @@
 const text = document.getElementById('text')
-const texts = ["Web Developer ","Coder "]
+const texts = ["Web Developer ","Coder ","Not a Robot "]
 let currText = []
 let i = 0
 let j = 0
