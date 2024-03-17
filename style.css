@@ -10,155 +10,6 @@ Color for light theme :
     --secCol : white;
     dark back col : #191919
 */
-
-/* *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family:'League Spartan', sans-serif;
-    
-}
-:root{
-    --primCol: #FFC857;
-    --secCol : #323031 ;
-    --backCol:  #F4F4F8;
-}
-.dark-theme{
-   
-    --secCol:#F4F4F8;
-    --backCol:#191919;
-}
-body{
-    display: block;
-}
-.hero{
-    height: 100vh;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-}
-a{ 
-    text-decoration: none;
-}
-nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding:45px 8% 0 8% ;
-}
-.logo{
-    color: var(--secCol);
-    font-size: 3rem;
-    letter-spacing: 1px;
-    cursor: pointer;
-}
-span{
-    color: var(--primCol);
-    
-}
-nav ul li{
-    list-style-type: none;
-    display: inline-block;
-    padding: 10px 25px;
-}
-nav ul li a{
-    color: var(--secCol);
-    text-decoration: none;
-    font-weight: 600;
-    text-transform: capitalize;
-}
-nav ul li a:hover{
-    color: var(--primCol);
-    transition: .5s;
-}
-.btn{
-    background-color: var(--primCol);
-    color: var(--secCol);
-    text-decoration: none;
-    border:2px solid transparent;
-    font-weight: 600;
-    padding: 10px 25px;
-    border-radius: 30px;
-    transition: transform .5s;
-}
-.btn:hover{
-    transform: scale(1.3);
-    background-color: var(--secCol);
-    color: var(--primCol);
-}
-.content{
-    position: absolute;
-    top: 50%;
-    left: 8%;
-    transform: translateY(-50%);
-}
-h1{
-    color: var(--secCol);
-    margin: 20px 0px 20px;
-    font-size:  3rem;
-}
-
-h3{
-    color: var(--secCol);
-    
-    font-size: 1.7rem;
-    margin-bottom: 50px;
-}
-h3 span{
-    padding: 5px;
-    position: relative;
-    color: var(--primCol);
-    font-size: 40px;
-    border-right: 2px solid var(--primCol);
-}
-
-
-h4{
-    color: rgb(18, 77, 18);
-    letter-spacing: 2px;
-    font-size: 1.5rem;
-}
-.aboutMe{
-    width: 100%;
-    padding: 100px 0px;
-    background-color: var(--backCol);
-}
-.aboutMe .main img{
-    width: 40%;
-    transform: rotateY(180deg);
-}
-.aboutMeText{
-    width: 500px;
-}
-.main{
-    width: 1130px;
-    max-width: 95%;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    
-}
-.aboutMeText h2{
-    color: var(--secCol);
-    font-size: 3rem;
-    text-transform: capitalize;
-    margin-bottom: 20px;
-}
-.aboutMeText h5{
-    color: var(--secCol);
-    letter-spacing: 2px;
-    font-size: 1.5rem;
-    text-transform: capitalize;
-    margin-bottom: 25px;
-}
-.aboutMeText p{
-    color: var(--secCol);
-    letter-spacing: 0.5px;
-    line-height: 28px;
-    font-size: 1rem;
-    margin-bottom: 40px;
-} */
 * {
     margin: 0;
     padding: 0;
@@ -301,7 +152,7 @@ h4{
     font-size: 1.5rem;
   }
   
-  .aboutMe {
+  .aboutMe .skill .projects{
     width: 100%;
     padding: 100px 0;
     background-color: var(--backCol);
@@ -352,6 +203,29 @@ button:hover{
     border: 2px solid var(--primCol);
     cursor: pointer;
 }
+
+.skill-logos, 
+.project-links{
+    width: 400px; 
+    height: 400px;
+}
+.skill-logos {
+    display: flex; /* Make skill-logos a flex container */
+    justify-content: center; /* Center the matrix horizontally */
+    align-items: center; /* Center the matrix vertically (optional) */
+  }
+  .skill-matrix {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Set 3 columns */
+    grid-gap: 10px; /* Add spacing between boxes */
+    width: fit-content; /* Adjust width as needed */
+  }
+  .skill-box {
+    border: 1px solid blue;
+    text-align: center;
+    font-size: 2em; /* Adjust icon size */
+    color: #333; /* Set a default color for icons */
+  }
 /* 
 Responsiveness for mobile view */
 

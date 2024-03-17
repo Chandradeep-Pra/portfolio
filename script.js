@@ -56,4 +56,14 @@ emailButton.addEventListener('click', function() {
     window.location.href = `mailto:${emailAddress}`;
   });
 
+  const linkedinButton = document.getElementById('linkedinButton');
+  linkedinButton.addEventListener('click', function() {
+      window.open('https://www.linkedin.com/in/chandradeepprasad/','_blank');
+    });
+
+    const gitButton = document.getElementById('gitButton');
+    gitButton.addEventListener('click', function() {
+        window.open('https://www.github.com/Chandradeep-Pra','_blank');
+      });
+
   
