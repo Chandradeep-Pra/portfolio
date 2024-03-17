@@ -229,6 +229,143 @@ button:hover{
 /* 
 Responsiveness for mobile view */
 
-@media only screen and (max-width: 990px){
-   
-}
+/* Target screens less than 1024px (tablets and laptops) */
+@media only screen and (max-width: 1024px) {
+    .main {
+      /* Adjust max-width for a better layout on wider screens */
+      max-width: 80%;
+    }
+  
+    .content {
+      flex-direction: column-reverse; /* Stack elements on top of each other (reverse order for name first) */
+    }
+  
+    .content > div:first-child,
+    .content > div:last-child {
+      width: 100%; /* Make sections full width on medium screens */
+      padding: 30px 20px; /* Adjust padding for better spacing */
+    }
+  
+    .aboutMeText {
+      /* Increase font size for better readability */
+      font-size: 1.1rem;
+    }
+  }
+  
+  /* Target screens less than 768px wide (tablets and mobiles) */
+  @media only screen and (max-width: 768px) {
+    .hero {
+      /* Adjust background behavior for mobile (optional) */
+      /* You can add styles here to change the hero section 
+         background image or size for mobile */
+    }
+  
+    .nav {
+        /* Adjust padding for smaller screens */
+        padding: 15px 20px;
+      }
+    
+      .logo {
+        font-size: 2.2rem; /* Adjust font size for better scaling */
+      }
+    
+      nav ul {
+        /* Hide navigation links initially and show a menu button */
+        display: none;
+      }
+    
+      /* Create a hamburger menu button */
+      .nav .menu-btn {
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        cursor: pointer;
+        z-index: 11; /* Ensure button appears above other elements */
+      }
+    
+      /* Style the menu button lines (adjust as needed) */
+      .nav .menu-btn:before,
+      .nav .menu-btn:after {
+        content: '';
+        display: block;
+        width: 2px;
+        height: 20px;
+        background-color: var(--secCol);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    
+      .nav .menu-btn:before {
+        left: 10px;
+      }
+    
+      .nav .menu-btn:after {
+        left: 0;
+      }
+    
+      /* Toggle navigation links on menu button click */
+      .nav.active ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 100%; /* Position the menu below the navbar */
+        left: 0;
+        width: 100%;
+        background-color: var(--backCol);
+        padding: 20px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+        transition: all 0.3s ease-in-out;
+      }
+    
+      .nav.active .menu-btn:before {
+        /* Rotate first line on menu open */
+        transform: translateY(-50%) rotate(-45deg);
+      }
+    
+      .nav.active .menu-btn:after {
+        /* Rotate second line on menu open */
+        transform: translateY(-50%) rotate(45deg);
+      }
+    
+      nav ul li {
+        padding: 10px 0; /* Adjust padding for vertical menu */
+      }
+  
+    .logo {
+      font-size: 2.5rem; /* Adjust font size for better scaling */
+    }
+  
+    nav ul li {
+      padding: 5px 10px; /* Reduce padding for smaller navigation */
+    }
+  
+    .content {
+      align-items: center; /* Center elements horizontally on mobile */
+    }
+  
+    .name-title {
+      text-align: center; /* Center title elements vertically */
+    }
+  
+    .aboutMe .skill,
+    .aboutMe .projects {
+      padding: 30px 0; /* Adjust padding for sections on mobile */
+    }
+  
+    .skill-logos,
+    .project-links {
+      width: 250px; /* Adjust width for smaller screens */
+      height: 250px; /* Adjust height as needed */
+    }
+  
+    .skill-matrix {
+      grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns on mobile */
+    }
+  }
+  
+  
