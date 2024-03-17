@@ -1,3 +1,4 @@
+/* background-image: url(https://i.ibb.co/hHtDx0Z/light-Back.webp); */
 /*
 Color for light theme :
 1. #F9E0D9
@@ -10,7 +11,7 @@ Color for light theme :
     dark back col : #191919
 */
 
-*{
+/* *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -33,9 +34,11 @@ body{
 .hero{
     height: 100vh;
     width: 100%;
-   /* background-image: url(https://i.ibb.co/hHtDx0Z/light-Back.webp); */
     background-size: cover;
     background-position: center;
+}
+a{ 
+    text-decoration: none;
 }
 nav{
     display: flex;
@@ -155,7 +158,184 @@ h4{
     line-height: 28px;
     font-size: 1rem;
     margin-bottom: 40px;
-}
+} */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+  }
+  
+  :root {
+    --primCol: #FFC857;
+    --secCol: #323031;
+    --backCol: #F4F4F8;
+  }
+  
+  .dark-theme {
+    --secCol: #F4F4F8;
+    --backCol: #191919;
+  }
+  
+  body {
+    display: block;
+    overflow-x: hidden;
+  }
+  
+  .hero {
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 45px 8% 0 8%;
+
+    position: fixed; /* Make the navbar fixed to the top */
+    top: 0; /* Position it at the top of the viewport */
+    left: 0; /* Position it at the left of the viewport */
+    width: 100%; /* Make it span the entire width of the viewport */
+    z-index: 10;
+
+    background-color: transparent; /* Initial transparent background */
+    transition: background-color 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out;
+  }
+  
+  .logo {
+    color: var(--secCol);
+    font-size: 3rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
+  
+  span {
+    color: var(--primCol);
+  }
+  
+  nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 25px;
+  }
+  
+  nav ul li a {
+    color: var(--secCol);
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+  
+  nav ul li a:hover {
+    color: var(--primCol);
+    transition: .5s;
+  }
+  
+  .btn {
+    background-color: var(--primCol);
+    color: var(--secCol);
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: 600;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: transform .5s;
+  }
+  
+  .btn:hover {
+    transform: scale(1.3);
+    background-color: var(--secCol);
+    color: var(--primCol);
+  }
+  
+  .content {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+  }
+  .content > div:first-child{
+    padding: 20px 20px;
+    width: 60%;
+  }
+  .content > div:last-child{
+    width: 40%;
+    float: right;
+  }
+  .name-title {
+    display: flex; /* Make elements display side-by-side */
+    align-items: center; /* Vertically align content within */
+  }
+  
+  .name-title h1,
+  .name-title h4 {
+    /* Adjust margins or padding if needed for spacing */
+    margin-right: 20px; /* Example spacing between h1 and h4 */
+  }
+  
+  
+  h1, h2, h3, h4 {
+    color: var(--secCol);
+    margin: 20px 0; /* Combined margins */
+  }
+  
+  h3 span {
+    padding: 5px;
+    position: relative;
+    color: var(--primCol);
+    font-size: 40px;
+    border-right: 2px solid var(--primCol);
+  }
+  
+  h4 {
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+  }
+  
+  .aboutMe {
+    width: 100%;
+    padding: 100px 0;
+    background-color: var(--backCol);
+  }
+  
+  .aboutMe .main img {
+    width: 40%;
+    transform: rotateY(180deg);
+  }
+  
+  .aboutMeText {
+    width: 500px;
+  }
+  
+  .main {
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .aboutMeText h2,
+  .aboutMeText h5,
+  .aboutMeText p {
+    color: var(--secCol);
+    letter-spacing: 0.5px;
+    line-height: 28px; /* Removed redundant font-size */
+  }
+  
+  .aboutMeText p {
+    margin-bottom: 40px;
+  }
 button{
     background-color: var(--primCol);
     color: var(--secCol);
